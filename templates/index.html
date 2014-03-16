@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#mcconnelling</title>
+
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body style="background-color:black;">
+	<style>
+	  .jumbotron {
+	  background-color:black;
+	  padding-top:100px;
+	  }
+	</style>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">#McConnelling</a>
+        </div>
+        <div class="navbar-collapse collapse">
+		  <div class="nav navbar-left">
+			<script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script><a rel="nofollow" href="http://www.facebook.com/share.php?u=<;url>" onclick="return fbs_click()" target="_blank" class="fb_share_link btn btn-lg btn-primary">Share this mashup on Facebook</a>
+		  </div>
+            <a class="btn btn-lg btn-success nav navbar-right" href='/'> Next Song ></a>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="jumbotron">
+		<script src="http://www.google.com/jsapi"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
+
+		<!-- The static source video -->
+		<div id="ytapiplayer1">
+			You need Flash player 8+ and JavaScript enabled to view this video.
+		</div>
+
+		<script type="text/javascript">
+			google.load("swfobject", "2.1");
+			function onYouTubePlayerReady(playerId){
+				ytplayer = document.getElementById("myytplayer1");
+				ytplayer.playVideo();
+				ytplayer.mute();
+			}
+			var params = { allowScriptAccess: "always" };
+			var atts = { id: "myytplayer1" };
+			swfobject.embedSWF("http://www.youtube.com/v/nrdTX8m5G98?enablejsapi=1&playerapiid=ytplayer&version=3&controls=0&loop=1&playlist=nrdTX8m5G98", "ytapiplayer1", "100%", "750", "8", null, null, params, atts);
+		</script>
+
+		<br>
+
+		<!-- The music source video -->
+		<div id="ytapiplayer2">
+			You need Flash player 8+ and JavaScript enabled to view this video.
+		</div>
+
+		<script type="text/javascript">
+			var params = { allowScriptAccess: "always" };
+			var atts = { id: "myytplayer2" };
+			swfobject.embedSWF("http://www.youtube.com/v/{{id}}?enablejsapi=1&playerapiid=ytplayer&version=3&autoplay=1&controls=0&loop=1&playlist={{id}}", "ytapiplayer2", "1", "1", "8", null, null, params, atts);
+		</script>
+	</div>
+
+	<div id="footer">
+	  <div class="container muted credit">
+		<p><div class="pull-left">Built by Revan Sopher. <a href="https://github.com/revan/mcconnelling">Fork me on GitHub!</a></div><div class="pull-right"><a href="http://knowyourmeme.com/memes/mcconnelling">  What is this?</a> </div></p>
+	  </div>
+	</div>
+
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-45577399-3', 'mcconneller.herokuapp.com');
+		ga('send', 'pageview');
+	</script>
+  </body>
+</html>
+
